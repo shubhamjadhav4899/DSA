@@ -1,0 +1,15 @@
+package com.collection.queue;
+
+import java.util.Queue;
+
+public class PriorityQueue {
+
+	public static void main(String[] args) {
+		Queue<String> data=new java.util.PriorityQueue<String>();
+		data.offer("A");
+		data.offer("B");
+		data.offer("D");
+		data.offer("c");
+	}
+
+}

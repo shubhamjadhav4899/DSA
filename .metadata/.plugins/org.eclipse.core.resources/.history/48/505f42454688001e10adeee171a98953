@@ -1,0 +1,37 @@
+package dac.dsa.assignment_1.question_1;
+
+public class Queue implements LinkedList {
+	private Node tail;
+	private Node head;
+	
+	public Queue() {
+		tail=null;
+		head=null;
+		
+	}
+
+	@Override
+	public void insert(int n) {
+		Node newNode=new Node();
+		newNode.setData(n);
+		newNode.setNext(null);
+		if(head==null) {
+			head=newNode;
+			tail=newNode;
+			return;
+		}
+		newNode.setNext(head);
+		head=newNode;
+	}
+
+	@Override
+	public void delete() {
+		Node newNode=new Node();
+	}
+
+	@Override
+	public void print() {
+
+	}
+
+}

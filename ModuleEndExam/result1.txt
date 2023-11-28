@@ -1,0 +1,8 @@
+Total Charecter is :510
+Total Line is :25
+Total Word is :42
+Total Word is :167
+LongWord is :Workspace\\ModuleEndExam\\src\\question\\one\\FileTestOne.java"));
+ShortWord is :
+Name: Shubham Sudhakar Jadhav
+ROll No:

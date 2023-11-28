@@ -1,0 +1,13 @@
+package com.dsa.doublyLinkedList;
+
+public interface DoublyLinkedList {
+	void addAtFront(int n);
+	
+	void printForward();
+	
+	void printBackward();
+	
+	void addRear(int n);
+	
+	void deleteFirstNode();
+}

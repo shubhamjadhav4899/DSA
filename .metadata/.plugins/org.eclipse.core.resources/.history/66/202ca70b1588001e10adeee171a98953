@@ -1,0 +1,21 @@
+package question.two;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class DisplayThread extends Thread {
+	private List fb = new ArrayList();
+	private List pm = new ArrayList();
+
+	public void addPrimeList(int n) {
+		pm.add(n);
+		System.out.println("pm addes:-" + n);
+	}
+
+	public void addFibb(int n) {
+		fb.add(n);
+	}
+
+	
+}

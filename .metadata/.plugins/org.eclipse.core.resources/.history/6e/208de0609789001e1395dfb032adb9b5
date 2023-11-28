@@ -1,0 +1,6 @@
+package Practical;
+
+public interface DoublyLinked {
+	void addAtEnd(int num);
+	
+}

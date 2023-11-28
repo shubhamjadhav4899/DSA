@@ -1,0 +1,13 @@
+package linkedList.example_1;
+
+import com.dsa.linkedList.LinkedList;
+import com.dsa.linkedList.LinkedListImpl;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedListImpl ls=new LinkedListImpl();
+	}
+
+}

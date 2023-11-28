@@ -1,0 +1,9 @@
+package com.dsa.tree.binaryTreeMap;
+
+public class BinaryNode {
+	private int data;
+	private BinaryNode lChild;
+	private BinaryNode rChild;
+	
+	
+}

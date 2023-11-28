@@ -1,0 +1,19 @@
+package dac.dsa.assignment_1.question_1;
+
+public class QueueAppDemo {
+
+	public static void main(String[] args) {
+		LinkedList ls=new Queue();
+		//operation for inserting elemet
+		ls.insert(10);
+		ls.insert(44);
+		ls.insert(14);
+		ls.insert(155);
+		
+		
+		ls.delete();
+		ls.delete();
+		ls.print();
+	}
+
+}

@@ -1,0 +1,31 @@
+package Practical;
+
+public class DoublyLinkedImpl implements DoublyLinked {
+	
+	private Node head;
+	private Node tail;
+	
+	
+	public DoublyLinkedImpl() {
+		head=null;
+		tail=null;
+	}
+
+
+	@Override
+	public void addAtEnd(int num) {
+		Node node=new Node();
+		node.setData(num);
+		node.setNext(null);
+		node.setPrvious(null);
+		
+		if(head==null) {
+			head=node;
+			tail=node;
+		}
+		tail.setNext(node);
+		node.setPrvious(tail);
+		
+	}
+
+}

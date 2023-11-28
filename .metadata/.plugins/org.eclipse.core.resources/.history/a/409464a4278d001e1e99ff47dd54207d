@@ -1,0 +1,13 @@
+package BinarySearch;
+	
+public class BinarySearchImpl implements BinarySearch {
+	private BSTNode root;
+	
+
+	@Override
+	public void search(int n) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package dac.dsa.assignment_1.question_1;
+
+public class Node {
+	private int data;
+	private Node next;
+	public Node() {
+	}
+	
+}

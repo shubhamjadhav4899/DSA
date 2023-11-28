@@ -1,0 +1,33 @@
+
+/*3. Give the recursive definition for finding product of two integers (both positive and negative).
+Implement a recursive function based on the above definition.
+*/
+package assignment;
+
+public class Three {
+
+	public static int main(String[] args) {
+		int a=-2;
+		int b=4;
+		
+		findProduct(a,b);
+	}
+
+	private static int findProduct(int a, int b) {
+		int num1=a>=0?a:-a;
+		boolean flaga=a>=0?true:false;
+		int num2=b>=0?b:-b;
+		boolean flagb=b>=0?true:false;
+		System.out.println(num1);
+		if(b>a) {
+			int temp=a;
+			a=b;
+			b=temp;
+		}
+		for(int i=1;i<=b;i++) {
+			a+=a;
+		}
+		
+	}
+
+}

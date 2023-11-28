@@ -1,0 +1,49 @@
+package assignment;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
+
+public class MyApp {
+
+	public static void main(String[] args) {
+		LinkedLilst ls=new LinkedListImpl();
+		Stack st=new Stack();
+		st.push("ss");
+		st.push("dd");
+		st.push("pp");
+		
+		List lss=new ArrayList();
+		lss.add(220);
+		lss.add(20);
+		lss.add(30);
+		System.out.println(st.pop());
+		
+		//Adding the element using queue collection framework
+//		ls.add(10);
+//		ls.add(30);
+//		ls.add(20);
+//		ls.add(40);
+//		ls.add(50);
+//		ls.add(60);
+		//deleting the data
+		
+//		ls.insertInSorted(30);
+//		ls.insertInSorted(20);
+//		ls.insertInSorted(300);
+		
+//		ls.delete(10);
+//		ls.deleteAll(20);
+		//printing the data
+		
+		ls.push(10);
+		ls.push(200);
+		ls.push(10);
+		
+		ls.print();
+		System.out.println("Middle :-"+ls.findMiddle());
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.dsa.doublyLinkedList;
+
+public interface DoublyLinkedList {
+	void addAtFront(int n);
+}

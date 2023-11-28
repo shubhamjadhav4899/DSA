@@ -1,0 +1,23 @@
+package com.collection.queue;
+
+import java.util.NoSuchElementException;
+import java.util.Queue;
+
+public class PriorityQueue {
+
+	public static void main(String[] args)throws NoSuchElementException {
+		Queue<Integer> data=new java.util.PriorityQueue<Integer>();
+//		data.offer(5);
+//		data.offer(1);
+//		data.offer(4);
+//		data.offer(2);
+		data.poll();
+		
+		System.out.println(data.element());
+		System.out.println(data.peek());
+		
+		
+		System.out.println(data);
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.dsa.tree.binaryTreeMap;
+
+public class MyApp {
+
+	public static void main(String[] args) {
+		BinaryTree binaryTree=new BinaryTree();
+		binaryTree.buildTree();
+		System.out.println("Print Using optimized preorder...");
+		binaryTree.printUsingPreOrder();
+		System.out.println("Print using Optimized postorder...");
+		binaryTree.printUsingPostOrder();
+		System.out.println("Print using un-optimized preorder..");
+		binaryTree.printUsingUnoptimizedPreOrder();
+		
+	}
+
+}

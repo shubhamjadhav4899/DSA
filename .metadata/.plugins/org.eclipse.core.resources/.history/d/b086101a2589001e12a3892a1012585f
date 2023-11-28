@@ -1,0 +1,5 @@
+package linkedList.example_1;
+
+public interface linkedList {
+
+}

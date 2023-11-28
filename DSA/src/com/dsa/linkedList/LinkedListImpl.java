@@ -1,0 +1,42 @@
+package com.dsa.linkedList;
+
+public class LinkedListImpl implements LinkedList {
+	Node n;
+
+	private Node head;
+	private Node tail;
+
+	public LinkedListImpl() {
+		head = null;
+		tail = null;
+	}
+
+	@Override
+	public void insertFirst(int element) {
+		n = n;
+		n.setData(element);
+		n.setNext(null);
+		if(head==null) {
+			tail=n;
+		}
+	}
+
+	@Override
+	public void insert(int n) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(int n) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

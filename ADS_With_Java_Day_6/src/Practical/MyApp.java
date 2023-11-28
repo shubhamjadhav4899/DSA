@@ -1,0 +1,21 @@
+package Practical;
+
+public class MyApp {
+
+	public static void main(String[] args) {
+		DoublyLinked doubly=new DoublyLinkedImpl();
+		
+//		doubly.addAtEnd(10);
+//		doubly.addAtEnd(20);
+//		doubly.addAtEnd(300);
+		
+		doubly.InsertInSort(10);
+		doubly.InsertInSort(3);
+//		doubly.InsertInSort(30);
+//		doubly.InsertInSort(20);
+		
+//		doubly.deleteFirst();
+		doubly.print();
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.dsa.linkedList;
+
+public interface LinkedList {
+	public void addFirst(int element);
+}

@@ -1,0 +1,40 @@
+package question.two;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class DisplayThread extends Thread {
+	private List fb=new ArrayList();
+	private List pm=new ArrayList();
+	
+	
+	public void addPrimeList(int n) {
+		pm.add(n);
+		System.out.println("pm addes:-"+n);
+	}
+	
+	public void addFibb(int n) {
+		fb.add(n);
+	}
+	
+	Iterator fbItr=fb.iterator();
+	Iterator pmItr=pm.iterator();
+	public void printPrime() {
+		System.out.println("Prime");
+		while(pmItr.hasNext()) {
+			System.out.print(pmItr.next());
+		}
+	}
+	public void printFibbonacci() {
+		System.out.println("fib");
+		while(fbItr.hasNext()) {
+			System.out.print(fbItr.next());
+
+		}
+	}
+	public void run() {
+		printPrime();
+		printFibbonacci();
+	}
+}

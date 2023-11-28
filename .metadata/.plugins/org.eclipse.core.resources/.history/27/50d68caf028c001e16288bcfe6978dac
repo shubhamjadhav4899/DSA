@@ -1,0 +1,11 @@
+/*3. Give the recursive definition for finding product of two integers (both positive and negative).
+Implement a recursive function based on the above definition.
+*/
+public class QuestionThree {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

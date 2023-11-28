@@ -1,0 +1,13 @@
+package assignment;
+
+public interface LinkedLilst {
+	public void add(int n);
+		
+	public void delete(int n);
+	
+	
+	public void print();
+	
+	
+	
+}

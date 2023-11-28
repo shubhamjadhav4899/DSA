@@ -1,0 +1,60 @@
+
+public class BinaryTree {
+	private BTNode root;
+	private int methodCount;
+
+	public BinaryTree() {
+		root = null;
+	}
+
+	public void buildTree01() {
+		BTNode n1 = new BTNode(5);
+		BTNode n2 = new BTNode(10);
+		BTNode n3 = new BTNode(4);
+		BTNode n4 = new BTNode(3);
+
+		n1.lChild = n2;
+		n1.rChild = n3;
+
+		n2.lChild = n4;
+
+		root = n1;
+	}
+
+	private void printUsingPreOrder(BTNode root) {
+		++methodCount;
+		if (root == null) {
+			return;
+		}
+
+		System.out.println(root.data);
+
+		if (root.lChild != null) {
+			printUsingPreOrder(root.lChild);
+		}
+
+		if (root.rChild != null) {
+			printUsingPreOrder(root.rChild);
+		}
+	}
+	public void printUsingPreOrder() {
+		methodCount = 0;
+		printUsingPreOrder(root);
+		System.out.println("methodCount = " + methodCount);
+	}
+
+	private void printUsingPreOrderUnoptimised(BTNode root) {
+		++methodCount;
+		if (root == null) {
+			return;
+		}
+		System.out.println(root.data);
+		printUsingPreOrderUnoptimised(root.lChild);
+		printUsingPreOrderUnoptimised(root.rChild);
+	}
+	public void printUsingPreOrderUnoptimised() {
+		methodCount = 0;
+		printUsingPreOrderUnoptimised(root);
+		System.out.println("methodCount = " + methodCount);
+	}
+}

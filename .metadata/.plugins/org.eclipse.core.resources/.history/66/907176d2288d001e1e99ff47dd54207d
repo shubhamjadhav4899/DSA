@@ -1,0 +1,36 @@
+package BinarySearch;
+
+public class BSTNode {
+	private int data;
+	private BSTNode lNode;
+	private BSTNode rNode;
+
+	BSTNode(int data) {
+		this.data = data;
+	}
+
+	public int getData() {
+		return data;
+	}
+
+	public void setData(int data) {
+		this.data = data;
+	}
+
+	public BSTNode getlNode() {
+		return lNode;
+	}
+
+	public void setlNode(BSTNode lNode) {
+		this.lNode = lNode;
+	}
+
+	public BSTNode getrNode() {
+		return rNode;
+	}
+
+	public void setrNode(BSTNode rNode) {
+		this.rNode = rNode;
+	}
+
+}

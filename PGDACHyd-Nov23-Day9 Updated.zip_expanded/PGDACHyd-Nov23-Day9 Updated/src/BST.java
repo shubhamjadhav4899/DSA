@@ -1,0 +1,160 @@
+
+public class BST {
+	private BTNode root;
+
+	public BST() {
+		root = null;
+	}
+
+	public void insert(int element) {
+		BTNode newNode = new BTNode(element);
+
+		if (root == null) {
+			root = newNode;
+			return;
+		}
+
+		BTNode parent = null;
+		BTNode current = root;
+		while (current != null) {
+			parent = current;
+
+			if (element < current.data) {
+				current = current.lChild;
+			} else {
+				current = current.rChild;
+			}
+		}
+
+		if (element < parent.data) {
+			parent.lChild = newNode;
+		} else {
+			parent.rChild = newNode;
+		}
+	}
+
+	public boolean search(int element) {
+		BTNode current = root;
+
+		while (current != null) {
+			if (element == current.data) {
+				return true;
+			}
+
+			if (element < current.data) {
+				current = current.lChild;
+			} else {
+				current = current.rChild;
+			}
+		}
+
+		return false;
+	}
+
+	private void printUsingInorder(BTNode root) {
+		if (root == null) {
+			return;
+		}
+
+		if (root.lChild != null) {
+			printUsingInorder(root.lChild);
+		}
+
+		System.out.print(root.data + " ");
+
+		if (root.rChild != null) {
+			printUsingInorder(root.rChild);
+		}
+	}
+	public void printBST() {
+		printUsingInorder(root);
+		System.out.println("");
+	}
+
+	public void delete(int element) {
+		// Find the node to be deleted.
+		BTNode parent = null;
+		BTNode current = root;
+		while (current != null) {
+			if (element == current.data) {
+				break;
+			}
+			parent = current;
+			if (element < current.data) {
+				current = current.lChild;
+			} else {
+				current = current.rChild;
+			}
+		}
+
+		// Is an element found?
+		if (current == null) {
+			return;
+		}
+
+		// Deleting leaf node?
+		if ((current.lChild == null) && (current.rChild == null)) {
+			// Are we deleting root node?
+			if (current == root) {
+				root = null;
+				return;
+			}
+			// Delete current node, child of parent. But which child?
+			if (current.data < parent.data) {
+				parent.lChild = null;
+			} else {
+				parent.rChild = null;
+			}
+			return;
+		}
+
+		// Deleting node with one child?
+		BTNode childOfCurrent = null;
+		if (current.lChild == null) {
+			// current only has right child.
+			childOfCurrent = current.rChild;
+		}
+		if (current.rChild == null) {
+			// current only has left child.
+			childOfCurrent = current.lChild;
+		}
+		if (childOfCurrent != null) { // Current has only one child.
+			// Set only child of current as child of its parent.
+			if (current.data < parent.data) {
+				parent.lChild = childOfCurrent;
+			} else {
+				parent.rChild = childOfCurrent;
+			}
+			return;
+		}
+
+		// Deleting node with two children.
+		// 1. Find inorder successor of current.
+		BTNode inorderSuccessorParent = current;
+		BTNode inorderSuccessor = current.rChild;
+		while (inorderSuccessor.lChild != null) {
+			inorderSuccessor = inorderSuccessor.lChild;
+		}
+		// 2. Swap data of current and inorderSuccessor node.
+		int temp = current.data;
+		current.data = inorderSuccessor.data;
+		inorderSuccessor.data = temp;
+		// 3. Delete inorderSuccessor node.
+		if ((inorderSuccessor.lChild == null) && (inorderSuccessor.rChild == null)) {
+			// inorderSuccessor is a leaf node
+			if (inorderSuccessor == inorderSuccessorParent.lChild) {
+				inorderSuccessorParent.lChild = null;
+			} else {
+				inorderSuccessorParent.rChild = null;
+			}
+			return;
+		}
+		// Inorder successor has only one child => It will only be right child.
+		if (inorderSuccessor == inorderSuccessorParent.lChild) {
+			inorderSuccessorParent.lChild = inorderSuccessor.rChild;
+		} else {
+			inorderSuccessorParent.rChild = inorderSuccessor.rChild;
+		}
+		
+	}
+}

@@ -1,0 +1,14 @@
+package BinarySearch;
+
+public class BSTNode {
+	private int data;
+	private BSTNode lNode;
+	private BSTNode rNode;
+	BSTNode(int data) {
+		super();
+		this.data = data;
+	}
+	
+	
+	
+}

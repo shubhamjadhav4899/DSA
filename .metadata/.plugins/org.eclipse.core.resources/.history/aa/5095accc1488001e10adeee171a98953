@@ -1,0 +1,35 @@
+package question.two;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class DisplayThread extends Thread {
+	private List fb;
+	private List pm;
+	public DisplayThread() {
+		fb = new ArrayList();
+		pm = new ArrayList();
+	}
+
+	public void addPrimeList(int n) {
+		pm.add(n);
+		System.out.println("pm addes:-" + n);
+	}
+
+	public void addFibb(int n) {
+		fb.add(n);
+	}
+
+	public void run() {
+		Iterator fbItr = fb.iterator();
+		Iterator pmItr = pm.iterator();
+		while (pmItr.hasNext()) {
+			System.out.print(pmItr.next());
+		}
+		while (fbItr.hasNext()) {
+			System.out.print(fbItr.next());
+
+		}
+	}
+}

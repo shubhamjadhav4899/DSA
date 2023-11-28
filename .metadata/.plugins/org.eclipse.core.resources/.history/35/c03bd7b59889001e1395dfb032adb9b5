@@ -1,0 +1,15 @@
+package Practical;
+
+public class MyApp {
+
+	public static void main(String[] args) {
+		DoublyLinked doubly=new DoublyLinkedImpl();
+		
+		doubly.addAtEnd(10);
+		doubly.addAtEnd(20);
+		doubly.addAtEnd(300);
+		
+		doubly.print();
+	}
+
+}

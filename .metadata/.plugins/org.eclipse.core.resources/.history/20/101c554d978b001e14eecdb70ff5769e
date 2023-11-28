@@ -1,0 +1,18 @@
+package com.dsa.doublyLinkedList;
+
+public class MyApp {
+
+	public static void main(String[] args) {
+		DoublyLinkedListImpl db=new DoublyLinkedListImpl();
+		System.out.println("Adding At front");
+		db.addAtFront(10);
+		db.addAtFront(20);
+		db.addAtFront(40);
+		System.out.println("Forward Printing");
+		db.printForward();
+		System.out.println();
+		System.out.println("BackWard Printing");
+		db.printBackward();
+	}
+
+}

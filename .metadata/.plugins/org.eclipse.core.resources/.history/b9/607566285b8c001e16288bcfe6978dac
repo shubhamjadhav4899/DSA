@@ -1,0 +1,26 @@
+package com.dsa.tree.binaryTreeMap;
+
+public class BinaryNode {
+	private int data;
+	private BinaryNode lChild;
+	private BinaryNode rChild;
+	public int getData() {
+		return data;
+	}
+	public void setData(int data) {
+		this.data = data;
+	}
+	public BinaryNode getlChild() {
+		return lChild;
+	}
+	public void setlChild(BinaryNode lChild) {
+		this.lChild = lChild;
+	}
+	public BinaryNode getrChild() {
+		return rChild;
+	}
+	public void setrChild(BinaryNode rChild) {
+		this.rChild = rChild;
+	}
+	
+}

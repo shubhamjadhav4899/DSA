@@ -1,0 +1,9 @@
+package dac.dsa.assignment_1.question_1;
+
+public interface LinkedList {
+	void insert(int n);
+	
+	void delete();
+	
+	void print();
+}

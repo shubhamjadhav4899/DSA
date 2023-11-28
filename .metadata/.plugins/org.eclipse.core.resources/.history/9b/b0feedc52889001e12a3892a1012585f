@@ -1,0 +1,11 @@
+package linkedList.example_1;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		linkedList ls=new LikedListimpl();
+		ls.addRear(10);
+	}
+
+}

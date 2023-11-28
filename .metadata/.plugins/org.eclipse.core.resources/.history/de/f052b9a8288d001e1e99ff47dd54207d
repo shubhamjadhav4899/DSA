@@ -1,0 +1,5 @@
+package BinarySearch;
+
+public interface BinarySearch {
+	void search(int n);
+}

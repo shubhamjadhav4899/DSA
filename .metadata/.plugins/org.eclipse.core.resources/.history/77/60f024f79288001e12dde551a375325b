@@ -1,0 +1,6 @@
+package assignment;
+
+public interface LinkedLilst {
+	public void insert(int n);
+	
+}

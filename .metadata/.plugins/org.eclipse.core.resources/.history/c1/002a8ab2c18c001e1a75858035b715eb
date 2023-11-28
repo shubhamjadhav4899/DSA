@@ -1,0 +1,13 @@
+package com.dsa.tree.binaryTreeMap;
+
+public class MyApp {
+
+	public static void main(String[] args) {
+		BinaryTree binaryTree=new BinaryTree();
+		binaryTree.buildTree();
+		binaryTree.printUsingPreOrder();
+		System.out.println("Print using postorder");
+		binaryTree.printUsingPostOrder();
+	}
+
+}

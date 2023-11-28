@@ -1,0 +1,79 @@
+package BinarySearch;
+	
+public class BinarySearchImpl implements BinarySearch {
+	private BSTNode root;
+	
+
+	BinarySearchImpl() {
+		root=null;
+	}
+
+
+	@Override
+	public void search(int n) {
+		BSTNode current=root;
+		while(current!=null) {
+			if(current.getData()==n) {
+				System.out.println("Element Found..");
+				return;
+			}
+			if(n<current.getData()) {
+				current=current.getlChild();
+			}
+			else {
+				current=current.getrChild();
+			}
+		}
+		System.out.println("Element Not Found..");
+		
+	}
+
+
+	@Override
+	public void insert(int n) {
+		BSTNode node =new BSTNode();
+		node.setData(n);
+		node.setlChild(null);
+		node.setrChild(null);
+		if(root==null) {
+			root=node;
+			return;
+		}
+		BSTNode current=root;
+		BSTNode parent=null;
+		while(current!=null) {
+			parent=current;
+			if(n<current.getData()) {
+				current=current.getlChild();
+				System.out.println("Inserted :-"+n);
+			}else {
+				current=current.getrChild();
+				System.out.println("Inserted :-"+n);
+			}
+		}
+		if(n<parent.getData()) {
+			parent.setlChild(node);
+		}
+		else {
+			parent.setrChild(node);
+
+		}
+	}
+
+
+	@Override
+	public void print() {
+		BSTNode current=root;
+		if(current==null) {
+			return;
+		}
+		System.out.print(current.getData());
+		if(current.getlChild()!=null) {
+			current=current.getlChild();
+		}
+		if(current.getrChild()!=null) {
+			current=current.getrChild();
+		}
+	}
+
+}

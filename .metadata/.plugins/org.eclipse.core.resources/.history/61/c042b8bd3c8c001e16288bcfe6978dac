@@ -1,0 +1,45 @@
+package com.dsa.doublyLinkedList;
+
+public class MyApp {
+
+	public static void main(String[] args) {
+		DoublyLinkedListImpl db=new DoublyLinkedListImpl();
+//		System.out.println("Adding At front");
+//		db.addAtFront(10);
+//		System.out.println("Added f");
+//		db.addAtFront(20);
+//		System.out.println("Added f");
+//		db.addAtFront(40);
+//		System.out.println("Added f");
+//		
+//		//Adding at rear
+//		System.out.println("Adding rear");
+//		db.addRear(50);
+//		System.out.println("Added r");
+//		db.addRear(60);
+//		System.out.println("Added r");
+//		db.addRear(70);
+//		System.out.println("Added r");
+		db.insert(20);
+		db.insert(10);
+		db.insert(25);
+		db.insert(40);
+		System.out.println("Before Delete");
+		System.out.println("Forward Printing");
+		db.printForward();
+		
+		//Inserting data In Sorted Manner
+		
+		//Deleting at front
+//		System.out.println("\nThe element is Deleted "+db.deleteFirst());
+//		System.out.println("After Delete");
+		System.out.println("Forward Printing");
+		db.printForward();
+		
+		System.out.println();
+		System.out.println("BackWard Printing");
+		db.printBackward();
+		
+	}
+
+}

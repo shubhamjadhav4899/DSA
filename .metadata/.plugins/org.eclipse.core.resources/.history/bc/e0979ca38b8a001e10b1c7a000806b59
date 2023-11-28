@@ -1,0 +1,181 @@
+package assignment;
+
+public class LinkedListImpl implements LinkedLilst {
+
+	private ListNode head;
+	private ListNode tail;
+	private int count;
+
+	public LinkedListImpl() {
+		head = null;
+		tail = null;
+	}
+
+	@Override
+	public void add(int n) {
+		ListNode newNode = new ListNode();
+		newNode.setElement(n);
+		newNode.setNext(null);
+		if (head == null) {
+			head = newNode;
+			tail = newNode;
+			return;
+		}
+		tail.setNext(newNode);
+		tail = newNode;
+
+	}
+
+	@Override
+	public void delete(int n) {
+		ListNode current = head;
+		ListNode previous = null;
+
+		while (current != null) {
+			if (current.getElement() == n) {
+				break;
+			}
+			previous = current;
+			current = current.getNext();
+		}
+		if (current == null) {
+			try {
+				throw new ListEmptyException("The List is empty");
+			} catch (Exception e) {
+				System.err.println(e);
+			}
+			return;
+		}
+		if (previous == null) {
+			head = head.getNext();
+			return;
+		}
+
+		previous.setNext(current.getNext());
+
+	}
+
+	@Override
+	public void print() {
+		ListNode current = head;
+		try {
+			if (current == null)
+				throw new ListEmptyException("The List is empty");
+			while (current != null) {
+				System.out.print(current.getElement());
+				current = current.getNext();
+			}
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+
+	}
+
+	@Override
+	public void insertInSorted(int n) {
+		ListNode node = new ListNode();
+		node.setElement(n);
+		node.setNext(null);
+		ListNode current = head;
+		ListNode previous = null;
+		if (head == null) {
+			head = node;
+			tail = node;
+			count++;
+			return;
+		}
+
+		while (current != null) {
+			if (current.getElement() > n) {
+				break;
+			}
+			previous = current;
+			current = current.getNext();
+		}
+
+		if (current==head) {
+			node.setNext(head);
+			head = node;
+			count++;
+			return;
+
+		}
+		count++;
+		previous.setNext(node);
+		node.setNext(current);
+
+	}
+
+	@Override
+	public void deleteAll(int n) {
+		while (head != null && head.getElement() == n) {
+			head = head.getNext();
+		}
+		ListNode current = head;
+		while (current != null && current.getNext() != null) {
+			if (current.getNext().getElement() == n)
+				current.setNext(current.getNext().getNext());
+			else
+				current=current.getNext();
+		}
+
+	}
+
+	@Override
+	public int findMiddle() {
+		ListNode middle=head;
+		int current=0;
+		while(middle.getNext()!=null) {
+			current++;
+			if(current==(count/2)+1) {
+				break;
+			}
+			else {
+				middle=middle.getNext();
+			}
+		}
+		
+		return middle.getElement();
+	}
+
+	@Override
+	public void push(int n) {
+		ListNode node=new ListNode();
+		node.setElement(n);
+		node.setNext(null);
+		if(head==null) {
+			head=node;
+			tail=node;
+			count++;
+			return;
+		}
+		node.setNext(head);
+		head=node;
+		count++;
+		
+		
+	}
+
+	@Override
+	public int pop() {
+		if(head==null) {
+			return 0;
+		}
+		
+		int popData=head.getElement();
+		head=head.getNext();
+		
+		return popData;
+		
+	}
+
+	@Override
+	public int peak() {
+		if(head==null)
+			return -1;
+		return head.getElement();
+	}
+	
+	
+
+}
